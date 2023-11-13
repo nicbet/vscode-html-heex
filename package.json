@@ -23,10 +23,9 @@
   "contributes": {
     "languages": [
       {
-        "id": "heex",
+        "id": "phoenix-heex",
         "aliases": [
-          "heex",
-          "Encapsulated Phoenix"
+          "HEEx"
         ],
         "extensions": [
           ".heex"

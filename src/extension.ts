@@ -137,7 +137,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   const documentSelector: DocumentFilter = {
     scheme: 'file',
-    language: 'heex',
+    language: 'phoenix-heex',
     pattern: '**/*.heex',
   }
 
