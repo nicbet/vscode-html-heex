@@ -1,0 +1,67 @@
+{
+  "name": "html-heex",
+  "displayName": "html-heex",
+  "description": "Enable HTML intellisense in the *.heex files",
+  "version": "0.0.1",
+  "publisher": "nicbet",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicbet/vscode-html-heex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nicbet/vscode-html-heex/issues"
+  },
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "icon": "images/icon.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "heex",
+        "aliases": [
+          "heex",
+          "Encapsulated Phoenix"
+        ],
+        "extensions": [
+          ".heex"
+        ],
+        "configuration": "./language-configuration-heex.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.71.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.20.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "vscode-html-languageservice": "^5.0.1"
+  },
+  "volta": {
+    "node": "16.20.0",
+    "yarn": "1.22.19"
+  },
+  "prettier": "@sonicgarden/prettier-config"
+}
